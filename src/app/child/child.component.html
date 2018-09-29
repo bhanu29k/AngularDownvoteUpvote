@@ -1,0 +1,45 @@
+<br><br><br><br>
+<div style="background-color: rgb(123, 123, 123)">
+<div class="four wide column center aligned votes"> 
+  <div class="ui statistic"> 
+  <div class="value"> 
+  <h2>{{ article1.votes }}</h2> 
+  </div>
+ <div class="label">
+    <h3>Points</h3> <br>
+  </div> 
+</div> 
+ </div>
+<div class="twelve wide column"> 
+  <h3 class="ui large header" >
+    Technology: {{ article1.title }} 
+  </h3> 
+
+  <h3 class="ui large header" >
+    Link:<a style="color: blue"  href="{{ article1.link }}"> {{ article1.link }}</a> 
+  </h3>
+
+  <h3 class="ui large header" >
+    Developer: {{ article1.developer }} 
+  </h3> 
+  <h3 class="ui large header" >
+      Genre: {{ article1.genre }} 
+    </h3> 
+  
+
+      <ul class="ui big horizontal list voters"> 
+         <li class="item"> 
+            <button (click)="UpVote()"> 
+            <i class="arrow up icon"></i> 
+            upvote 
+            </button> 
+           </li> 
+            <li class="item"> 
+               <button  (click)="DownVote()"> 
+                  <i class="arrow down icon"></i> 
+                   downvote 
+               </button>
+   </li> 
+  </ul>
+ </div>
+</div>
