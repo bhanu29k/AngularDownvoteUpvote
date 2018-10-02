@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
+import { ArticleService } from './Article.service';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { ChildComponent } from './child/child.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

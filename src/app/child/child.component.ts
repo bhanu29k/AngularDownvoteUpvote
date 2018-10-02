@@ -1,5 +1,6 @@
 import { Component, OnInit,HostBinding,Input } from '@angular/core';
 import {Article} from 'D:/Angular5/Project/Product/src/app/article';
+import { ArticleService } from '../Article.service';
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
@@ -8,9 +9,12 @@ import {Article} from 'D:/Angular5/Project/Product/src/app/article';
 export class ChildComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'row';
   @Input() article1:Article;
-  constructor() { }
+  public Article1=[];
+
+  constructor(private _articleService:ArticleService) { }
 
   ngOnInit() {
+    this.Article1=this._articleService.getEmployees();
   }
   UpVote()
   {
